@@ -9,7 +9,7 @@ const express = require('express')
 const app = express()
 const {join} =require('path')
 
-app.use(express.static(join(_dirname, 'public')))
+app.use(express.static(join(__dirname, 'public')))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
@@ -17,4 +17,4 @@ require('./routes')(app)
 
 
 
-app.listen(3000)
+app.listen(3001)
