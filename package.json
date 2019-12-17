@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Bryantkrause/Inbound/issues"
   },
-  "homepage": "https://github.com/Bryantkrause/Inbound#readme"
+  "homepage": "https://github.com/Bryantkrause/Inbound#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
