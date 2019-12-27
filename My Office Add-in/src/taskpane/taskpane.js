@@ -4,7 +4,7 @@
  */
 
 /* global console, document, Excel, Office */
-
+import test from '../../../models/test'
 Office.onReady(info => {
   if (info.host === Office.HostType.Excel) {
     // Determine if the user's version of Office supports all the Office.js APIs that are used in the tutorial.
@@ -35,15 +35,19 @@ function createTable() {
       expensesTable.getHeaderRowRange().values =
       [["Date", "Merchant", "Category", "Amount"]];
 
-      expensesTable.rows.add(null /*add at the end*/, [
-    ["1/1/2017", "The Phone Company", "Communications", "120"],
-    ["1/2/2017", "Northwind Electric Cars", "Transportation", "142.33"],
-    ["1/5/2017", "Best For You Organics Company", "Groceries", "27.9"],
-    ["1/10/2017", "Coho Vineyard", "Restaurant", "33"],
-    ["1/11/2017", "Bellows College", "Education", "350.1"],
-    ["1/15/2017", "Trey Research", "Other", "135"],
-    ["1/15/2017", "Best For You Organics Company", "Groceries", "97.88"]
-]);
+      expensesTable.rows.add(null /*add at the end*/, 
+        test
+//         [
+//     ["1/1/2017", "The Phone Company", "Communications", "120"],
+//     ["1/2/2017", "Northwind Electric Cars", "Transportation", "142.33"],
+//     ["1/5/2017", "Best For You Organics Company", "Groceries", "27.9"],
+//     ["1/10/2017", "Coho Vineyard", "Restaurant", "33"],
+//     ["1/11/2017", "Bellows College", "Education", "350.1"],
+//     ["1/15/2017", "Trey Research", "Other", "135"],
+//     ["1/15/2017", "Best For You Organics Company", "Groceries", "97.88"]
+// ]
+
+);
 
       // TODO3: Queue commands to format the table.
       expensesTable.columns.getItemAt(3).getRange().numberFormat = [['€#,##0.00']];
